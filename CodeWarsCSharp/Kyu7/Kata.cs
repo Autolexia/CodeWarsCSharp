@@ -1,12 +1,7 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace CodeWarsCSharp.Kyu7
+﻿namespace CodeWarsCSharp.Kyu7
 {
     internal class Kata
     {
+        public static int Divisors(int n) => Enumerable.Range(1, n).Count(i => n % i == 0);
     }
 }
