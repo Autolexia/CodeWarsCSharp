@@ -14,5 +14,18 @@
             // Assert
             CollectionAssert.AreEquivalent(expectedVariationArr, pinResult);
         }
+
+        [TestCase("one", 1)]
+        [TestCase("twenty", 20)]
+        [TestCase("two hundred forty-six", 246)]
+        [Test]
+        public void FixedTests(string numberWord, int value)
+        {
+            // Act
+            int returnedNumber = Kata.ParseInt(numberWord);
+
+            // Assert
+            Assert.That(value, Is.EqualTo(returnedNumber));
+        }
     }
 }
